@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>content-visibility</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+  <style>
+    .content-visibility-hidden {
+      content-visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <main>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div class="btn-group-vertical position-sticky top-0 pt-3">
+              <a href="index.html" class="btn btn-primary">什麼都沒做</a>
+              <a href="auto.html" class="btn btn-primary">content-visibility: auto</a>
+              <a href="hidden.html" class="btn btn-primary active" aria-current="page">content-visibility: hidden</a>
+              <a href="none.html" class="btn btn-primary">display: none</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card my-3 content-visibility-hidden" v-for="(item, index) in 1000" :key="index">
+              <div class="row g-0 align-items-center">
+                <div class="ratio ratio-16x9">
+                  <img src="https://picsum.photos/800/450" class="card-img-top" alt="Card title">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="render.js" type="module"></script>
+</body>
+</html>
