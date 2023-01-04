@@ -20,6 +20,7 @@
           <div class="col-md-3">
             <div class="btn-group-vertical position-sticky top-0 pt-3">
               <a href="index.html" class="btn btn-primary">什麼都沒做</a>
+              <a href="lazy.html" class="btn btn-primary">lazyload</a>
               <a href="auto.html" class="btn btn-primary">content-visibility: auto</a>
               <a href="hidden.html" class="btn btn-primary active" aria-current="page">content-visibility: hidden</a>
               <a href="none.html" class="btn btn-primary">display: none</a>
@@ -29,7 +30,7 @@
             <div class="card my-3 content-visibility-hidden" v-for="(item, index) in 1000" :key="index">
               <div class="row g-0 align-items-center">
                 <div class="ratio ratio-16x9">
-                  <img src="https://picsum.photos/800/450" class="card-img-top" alt="Card title">
+                  <img src="https://source.unsplash.com/random/800x450?sig=incrementingIdentifier" class="card-img-top" alt="Card title">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
