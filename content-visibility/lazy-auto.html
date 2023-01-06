@@ -6,11 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>content-visibility</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
-  <style>
-    .content-visibility-hidden {
-      content-visibility: hidden;
-    }
-  </style>
 </head>
 <body>
   <div id="app">
@@ -22,16 +17,16 @@
               <a href="index.html" class="btn btn-primary">什麼都沒做</a>
               <a href="lazy.html" class="btn btn-primary">lazyload</a>
               <a href="auto.html" class="btn btn-primary">content-visibility: auto</a>
-              <a href="lazy-auto.html" class="btn btn-primary">lazyload + auto</a>
-              <a href="hidden.html" class="btn btn-primary active" aria-current="page">content-visibility: hidden</a>
+              <a href="lazy-auto.html" class="btn btn-primary active" aria-current="page">lazyload + auto</a>
+              <a href="hidden.html" class="btn btn-primary">content-visibility: hidden</a>
               <a href="none.html" class="btn btn-primary">display: none</a>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="card my-3 content-visibility-hidden" v-for="(item, index) in 1000" :key="index">
+            <div class="card my-3 content-visibility-auto" v-for="(item, index) in 1000" :key="index">
               <div class="row g-0 align-items-center">
                 <div class="ratio ratio-16x9">
-                  <img :src="`https://source.unsplash.com/random/800x450?sig=${index}`" class="card-img-top" alt="Card title">
+                  <img :src="`https://source.unsplash.com/random/800x450?sig=${index}`" class="card-img-top" loading="lazy" alt="Card title">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
